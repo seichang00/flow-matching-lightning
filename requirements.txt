@@ -1,0 +1,8 @@
+lightning==2.3.3
+numpy==1.24.4
+PyYAML==6.0.2
+torch==2.4.1
+torchmetrics==1.5.2
+torchvision==0.19.1
+torchdyn==1.0.6
+matplotlib==3.7.5
