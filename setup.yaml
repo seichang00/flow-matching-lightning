@@ -1,0 +1,28 @@
+#data constants
+data:
+  data_dir: ./data
+  train_val_split: [0.95, 0.05]
+  batch_size: 250 #mini-batch size used to instantiate dataloader
+
+#model parameters
+model:
+  compile: False
+  input_size: [1, 32, 32] #MNIST shape is 1(B/W)x32x32
+  channels: [32, 64, 128] #number of channels in each layer of UNET
+  num_residual_layers: 2
+  t_embed_dim: 40 #dimension of time embedding vector
+  y_embed_dim: 40 #dimension of label embedding vector
+  eta: 0.1 #probability of assigning null labels for learning unguided vector field
+
+#training parameters
+train:
+  max_epochs: 150 #number of training epochs
+  optimizer: adam #type of optimizer to use
+  learning_rate: 0.001 #learning rate for optimizer
+  seed: 250325 #random seed
+  max_grad_norm: 5.0 #maximum norm of the gradients for clipping
+  patience: 10 # number of checks with no improvement after which training will be stopped
+  early_stopping_val: val/cfm_loss #loss value to monitor for early stopping
+  save_path: results/ # directory for saving training runs
+  run_name: mnist_cfm #name of single run folder to store model checkpoints and logs
+  profiler: pytorch #type of profiler, pytorch is necessary for tensorboard logging
