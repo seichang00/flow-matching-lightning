@@ -1,5 +1,5 @@
 # Flow Matching for Conditional Image Generation
-Implementation of flow matching-based conditional image generation on MNIST using Pytorch Lightning. 
+Implementation of conditional flow matching-based for image generation on MNIST using PyTorch Lightning. 
 
 ## Install python packages
 
@@ -25,7 +25,7 @@ In `demo.ipynb`, replace the `model_path` variable with the path to your saved c
 
 The inference code in `demo.ipynb` uses `torchdyn` library for simulating the learned vector field. Feel free to experiment with different ODE solvers (ex. `rk4`, `dopri5`) and guidance scales. 
 
-This repo was designed to be minimal for educational purposes as a follow up to the tutorial notebooks in [https://diffusion.csail.mit.edu/](https://diffusion.csail.mit.edu/). For a more extensive library on conditional flow matching, please refer to [
+This repo was designed to be minimal for educational purposes as a follow-up to the tutorial notebooks in [https://diffusion.csail.mit.edu/](https://diffusion.csail.mit.edu/). For a more extensive library on conditional flow matching, please refer to [
 TorchCFM](https://github.com/atong01/conditional-flow-matching).
 
 
