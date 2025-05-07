@@ -62,7 +62,7 @@ class FlowMatchingModule(L.LightningModule):
         x = self.path.sample_conditional_path(z, t)
 
         # Step 4: Regress and output loss
-        u_t_theta = self.model(x, t, y) #might need to add self.device?
+        u_t_theta = self.model(x, t, y)
         u_ref = self.path.conditional_vector_field(x, z, t)
         cfm_loss = torch.mean((u_t_theta - u_ref) ** 2)
 
