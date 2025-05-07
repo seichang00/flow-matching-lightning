@@ -5,7 +5,6 @@ from torch.utils.data import DataLoader, Dataset, random_split
 from torchvision.datasets import MNIST
 from torchvision import transforms
 
-#maybe CIFAR 10 instead?
 class MNISTDataModule(L.LightningDataModule):
     def __init__(
         self,
@@ -16,7 +15,7 @@ class MNISTDataModule(L.LightningDataModule):
         """Initialize a `LightningDataModule` for training on MNIST.
 
         :param dataset_path: path to the MNIST dataset
-        :param train_val_split: The train, val, test split. Defaults to `(0.8, 0.1, 0.1)`.
+        :param train_val_split: The train, val, test split. Defaults to `(0.9, 0.1)`.
         :param batch_size: The batch size. Defaults to `250`.
         """
         super().__init__()
